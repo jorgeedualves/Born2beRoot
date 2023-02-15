@@ -59,8 +59,6 @@ Nesta parte você deve definir algumas configurações no arquivo, referente a c
 
        Exemplo: **sudo apt update ;**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/04910f09-f77b-4c1a-b7cc-30986a95cdbf/Untitled.png)
-
 ### Editando /etc/sudoers.tmp
 
 1. Insira os defaults editando o arquivo com o comando **sudo visudo**
@@ -272,7 +270,7 @@ ser definido como 2:
         `chage -l`
         
     
-    ## 7 - Configurar Usuário
+ ## 7 - Configurar Usuário
     
     1. Para criar novo usuário usando **sudo**:
         
@@ -287,7 +285,7 @@ ser definido como 2:
          `$ sudo chage -l | <username>`
         
     
-    ## 8 - Criando novo grupo
+ ## 8 - Criando novo grupo
     
     1. Criar um novo grupo de usuário 42 via:
         
@@ -634,4 +632,20 @@ ser definido como 2:
        **|** conectar a saída de comando com a entrada do outro) combina comando
         
        **bc** calculadora do sistema
-11. 
+       
+11. **O número de usuários usando o servidor**
+       
+       **log=$(who | wc -l)**
+       variável: **log recebe o valor de =$**
+
+       **who** Mostra-nos quem está logado no sistema
+
+       **|** conectar a saída de comando com a entrada do outro) combina comando
+
+       **wc -l** conta as linhas
+   
+## 11 - Assinatura
+
+No diretório VirtualBox VMs\Born2beRoot execute no cmd o comando abaixo no arquivo **.vdi** para obter a assinatura:
+
+`$ sha1sum <nome do arquivo>.vdi`
